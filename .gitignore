@@ -1,0 +1,21 @@
+.pyc
+__pycache__/
+
+# Ambientes virtuais
+venv/
+env/
+tutorial-env/
+
+# Arquivo de saída do PyInstaller
+/dist/
+
+# Arquivo de configuração do PyInstaller
+/*.spec
+
+# Dependências instaladas com pip
+/requirements.txt
+/requirements-dev.txt
+
+# Outros arquivos
+index.py
+db.sqlite3

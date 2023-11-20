@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/w3.css' %}">
+    <style>
+        input#id_user_entery {
+                width: 21em;
+                padding: 1em;   
+        }
+        input.w3-indigo.w3-round-xlarge.w3-border.w3-button{
+            padding: 1em;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="w3-mobile">
+        
+        <h1 class="w3-center w3-padding w3-padding-16 w3-jumbo "></h1>
+        <section class="w3-margin-top">
+            <div class="w3-margin-top w3-padding-24">
+                <p class="w3-center "  style="max-width: 63%; margin: 0 auto;">
+                    <img src="{% static 'icones/brilliance.svg' %}" style="width: 17em;"  alt="Icon de balance">
+                </p>
+            </div>
+        </section>
+        <section class="w3-center w3-animate-zoom">
+            <form action="." method="post">
+                {% csrf_token %}
+                <p>
+                    {{ form.user_entery }}
+        
+                <input type="submit" class="w3-indigo w3-round-xlarge w3-border w3-button"  value="Enviar">
+                </p>
+            </form>
+        
+            <div class="w3-margin-top w3-justify" >
+                <p class="w3-animate-zoom w3-large w3-padding-16" style="max-width: 63%; margin: 0 auto;"">
+                    <i> - {{ response }}</i> <br>
+                </p>
+                <center><small>O Programa pode esta lento.. </small></center>
+                <center><small>Número total de pergunga: 3</small></center>
+                <center><small>Em homenagem à: Dionisía Madureira</small></center>
+            </div>
+        
+        </section>
+    </main>
+</body>
+</html>
