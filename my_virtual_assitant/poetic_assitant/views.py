@@ -17,13 +17,13 @@ class index(View):
         })
 
     def post(self, request, *args, **kwargs):
-        openai_api_key = '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'
+        openai_api_key = ENTER_YOUR_API_KEY
         client = OpenAI(api_key=openai_api_key)
 
         num_visits = request.session.get('num_visits', 3)
         request.session['num_visits'] = num_visits + 1
         
-        if num_visits > 50000:
+        if num_visits > 5:
                 response = 'Your number of questions time up' 
                 
         else:
@@ -34,7 +34,7 @@ class index(View):
                 try:
                     completion = client.chat.completions.create(model="gpt-3.5-turbo",messages=[
                             {"role": "system", "content": "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair."},
-                            {"role": "user", "content": 'Crie um poema com o seguinte tópico em programação' + prompt}
+                            {"role": "user", "content": 'Crie um poema com o seguinte tópico em programação e sua logíca' + prompt}
                         ],
                     temperature=0,
                     max_tokens=1024)
