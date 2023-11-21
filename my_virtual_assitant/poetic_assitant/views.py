@@ -8,7 +8,7 @@ from openai import OpenAI
 
 
 class index(View):
-    openai_api_key = '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'
+    openai_api_key = ENTER_YOUR_API_KEY
     client = OpenAI(api_key=openai_api_key)
 
     def get(self, request, *args, **kwargs):
