@@ -8,7 +8,7 @@ para tornar o aprendizado mais agradávelpara os programadores.
 Desenvolvido em Python, HTML e JavaScript, o Poetizador utiliza a API da OpenAI e o framework Django.
 
 ## Desenvolvedor
-- Samuel Africano
+- Samuel Kiteque Africano
 
 ## Dependências
 - Para utilizar a API da OpenAI, é necessário obter uma chave de API válida.
